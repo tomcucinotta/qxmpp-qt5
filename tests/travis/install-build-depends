@@ -5,8 +5,6 @@
 sudo sed -i 's/precise/trusty/g' /etc/apt/sources.list
 sudo apt-get update -qq
 
-set -e
-
 if [ "$QT_SELECT" = "qt4" ]; then
     sudo apt-get install -qq libqt4-dev
 else
