@@ -1,8 +1,11 @@
 #!/bin/sh
-set -e
 
-sudo add-apt-repository -y ppa:ubuntu-sdk-team/ppa
+# This  is an ugly hack for partial updating of build environment from
+# Ubuntu 12.04 (Precise Pangolin) to Ubuntu 14.04 (Trusty Tahr):
+sudo sed -i 's/precise/trusty/g' /etc/apt/sources.list
 sudo apt-get update -qq
+
+set -e
 
 if [ "$QT_SELECT" = "qt4" ]; then
     sudo apt-get install -qq libqt4-dev
