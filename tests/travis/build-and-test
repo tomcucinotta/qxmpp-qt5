@@ -37,7 +37,7 @@ esac
 
 # compile
 qmake $QMAKE_ARGS
-make VERBOSE=1
+make VERBOSE=1 -k
 
 # run tests
 make check
