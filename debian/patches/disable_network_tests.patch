@@ -1,0 +1,27 @@
+Description: disable tests which require a network connection
+Author: Jeremy Lainé <jeremy.laine@m4x.org>
+
+diff --git a/tests/tests.pro b/tests/tests.pro
+index bbc5989..e4bea5a 100644
+--- a/tests/tests.pro
++++ b/tests/tests.pro
+@@ -2,11 +2,9 @@ TEMPLATE = subdirs
+ SUBDIRS = \
+     qxmpparchiveiq \
+     qxmppbindiq \
+-    qxmppcallmanager \
+     qxmppdataform \
+     qxmppdiscoveryiq \
+     qxmppentitytimeiq \
+-    qxmppiceconnection \
+     qxmppiq \
+     qxmppjingleiq \
+     qxmppmessage \
+@@ -25,7 +23,6 @@ SUBDIRS = \
+     qxmppstanza \
+     qxmppstreamfeatures \
+     qxmppstunmessage \
+-    qxmpptransfermanager \
+     qxmpputils \
+     qxmppvcardiq \
+     qxmppversioniq

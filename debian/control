@@ -1,0 +1,63 @@
+Source: qxmpp
+Section: libs
+Priority: optional
+Maintainer: Jeremy Lainé <jeremy.laine@m4x.org>
+Uploaders: Boris Pek <tehnick@debian.org>
+Build-Depends: debhelper (>= 9),
+               doxygen,
+               graphviz,
+               libopus-dev,
+               libspeex-dev,
+               libtheora-dev,
+               libvpx-dev,
+               qtbase5-dev
+Standards-Version: 3.9.6
+Homepage: https://github.com/qxmpp-project/qxmpp
+Vcs-Git: git://anonscm.debian.org/collab-maint/qxmpp.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/qxmpp.git
+
+Package: libqxmpp0
+Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Multi-Arch: same
+Description: QXmpp library for XMPP client and server applications
+ QXmpp is a cross-platform C++ XMPP library built upon Qt. It strives to be
+ as easy to use as possible.
+ .
+ This package contains the shared library.
+
+Package: libqxmpp0-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: libqxmpp0 (= ${binary:Version}), ${misc:Depends}
+Multi-Arch: same
+Description: Debugging symbols for the QXmpp library
+ QXmpp is a cross-platform C++ XMPP library built upon Qt. It strives to be
+ as easy to use as possible.
+ .
+ This package contains the debugging symbols.
+
+Package: libqxmpp-dev
+Section: libdevel
+Architecture: any
+Depends: libqxmpp0 (= ${binary:Version}), qtbase5-dev, ${misc:Depends}
+Suggests: libqxmpp-doc
+Multi-Arch: same
+Description: Development files for the QXmpp library
+ QXmpp is a cross-platform C++ XMPP library built upon Qt. It strives to be
+ as easy to use as possible.
+ .
+ This package contains the development headers and libraries.
+
+Package: libqxmpp-doc
+Section: doc
+Architecture: all
+Depends: lynx | www-browser, ${misc:Depends}
+Suggests: libqxmpp-dev
+Description: Documentation for the QXmpp library
+ QXmpp is a cross-platform C++ XMPP library built upon Qt. It strives to be
+ as easy to use as possible.
+ .
+ This package contains the HTML documentation.

@@ -1,0 +1,4 @@
+libqxmpp-dev_0.9.3-1build1_amd64.deb libdevel optional
+libqxmpp-doc_0.9.3-1build1_all.deb doc optional
+libqxmpp0-dbg_0.9.3-1build1_amd64.deb debug extra
+libqxmpp0_0.9.3-1build1_amd64.deb libs optional
